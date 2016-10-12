@@ -1,0 +1,44 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="js/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="js/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</head>
+<body>
+<?php
+	include('header.php');
+	$upit=mysql_query="select slika from artikli";
+	$niz=mysql_fetch_array($upit);
+	
+	
+?> 
+	
+		<ul>
+			<li><a class="fancybox" rel="group" href="images/castle.png"><img src="<?php $niz['slika'];?>" alt="" /></a></li>
+			<li><a class="fancybox" rel="group" href="images/castle1.png"><img src="<?php $niz['slika'];?>" alt="" /></a></li>
+		</ul>
+		
+			 
+		
+		
+		
+    
+  
+		
+		<?php
+			include('futer.php');
+		?>
+       
+      
+      
+    
+    
+
+</body>
+</html>
